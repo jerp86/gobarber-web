@@ -1,5 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
+
+const spin = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+  from {
+    transform: rotate(0deg);
+  }
+`;
 
 export const Container = styled.button`
   background: #ff9000;
@@ -15,5 +24,9 @@ export const Container = styled.button`
 
   &:hover {
     background: ${shade(0.2, '#ff9000')};
+  }
+
+  svg {
+    animation: ${spin} 2s linear infinite;
   }
 `;
