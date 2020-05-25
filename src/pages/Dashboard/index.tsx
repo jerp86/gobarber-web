@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiPower, FiClock } from 'react-icons/fi';
 import {
@@ -8,14 +8,18 @@ import {
   Profile,
   Content,
   Schedule,
-  Calendar,
   NextAppointment,
+  Section,
+  Appointment,
+  Calendar,
 } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -63,6 +67,62 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/54115624?s=460&u=6dd0a7b2e45858cdb7b732f16721d4bca13cfe66&v=4"
+                  alt="Jerp86"
+                />
+
+                <strong>Jerp86</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/54115624?s=460&u=6dd0a7b2e45858cdb7b732f16721d4bca13cfe66&v=4"
+                  alt="Jerp86"
+                />
+
+                <strong>Jerp86</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/54115624?s=460&u=6dd0a7b2e45858cdb7b732f16721d4bca13cfe66&v=4"
+                  alt="Jerp86"
+                />
+
+                <strong>Jerp86</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
 
         <Calendar />
