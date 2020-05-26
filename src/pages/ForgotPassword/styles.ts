@@ -20,10 +20,10 @@ export const Content = styled.div`
   max-width: 700px;
 `;
 
-const appearFromLeft = keyframes`
+const appearFromRight = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
@@ -37,7 +37,7 @@ export const AnimationContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  animation: ${appearFromLeft} 1.5s;
+  animation: ${appearFromRight} 1.5s;
 
   form {
     margin: 80px 0;
@@ -86,5 +86,5 @@ export const Background = styled.div`
   background: url(${signInBackgroundImg}) no-repeat center;
   background-size: cover;
 
-  animation: ${appearFromLeft} 2s;
+  animation: ${appearFromRight} 2s;
 `;

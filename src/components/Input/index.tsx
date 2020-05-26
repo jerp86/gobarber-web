@@ -55,6 +55,7 @@ const Input: React.FC<InputProps> = ({
     >
       {Icon && <Icon size={20} />}
       <input
+        autoComplete="new-password"
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         defaultValue={defaultValue}

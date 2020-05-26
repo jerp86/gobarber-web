@@ -18,6 +18,7 @@ export const Container = styled.div<ContainerProps>`
 
   display: flex;
   align-items: center;
+  transition: 1.2s;
 
   & + div {
     margin-top: 8px;
@@ -70,6 +71,7 @@ export const Error = styled(Tooltip)`
 
   svg {
     margin: 0;
+    transition: color 2s;
   }
 
   span {
